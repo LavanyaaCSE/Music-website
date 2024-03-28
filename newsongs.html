@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<head>
+  <style>
+    .navbar {
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+    .menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.menu li {
+  margin-right: 10px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #333;
+   margin-left: 25px;
+      font-size: 20px;
+
+}
+
+.navbarse {
+  background-color: #f1f1f1;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.search-bar button {
+  padding: 5px 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.nav {
+  list-style-type: none;
+  margin-left: 30px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.nav li {
+  margin-right: 10px;
+}
+
+.nav li a {
+  text-decoration: none;
+  color: #333;
+   margin-left: 25px;
+   font-size: 20px;
+}
+  </style>
+  <title>New Songs</title>
+  <link rel="stylesheet" type="text/css" href="new.css">
+  <script src="new.js"></script>
+</head>
+<body>
+
+  <nav class="navbarse">
+    <img src="C:\Users\chefa\Downloads\WhatsApp Image 2023-05-04 at 21.46.06.jpeg" alt="Logo" style="height: 40px;width: 90px;
+  margin-right: 10px; text-align: left;margin-right: 100px;">
+  <form id="search-form">
+
+    <input type="text" id="search-input" placeholder="Search song...">
+    <button type="button" onclick="search()">Search</button>
+  </form>
+  <div class="login">
+    <ul class="nav">
+      <li><a href="loginf.html">login</a></li>
+      <li><a href="sub.html">subscribe</a></li>
+      <li><a href="loginform.html">register</a></li>
+    </ul>
+  </div>
+</nav>
+
+<nav class="navbar">
+  <ul class="menu">
+    <li><a href="mymusic.html" style="margin-left: 300px;">All</a></li>
+    <li><a href="trending.html" >Trending Now</a></li>
+    <li><a href="oldsongs.html">Old Songs</a></li>
+    <li><a href="newsongs.html">New Songs</a></li>
+    <li><a href="topartists.html">Top Artists</a></li>
+    <li><a href="topplaylist.html">Top Playlist</a></li>
+    <li><a href="games.html">Games</a></li>
+    <li><a href="downloaded.html">Download</a></li>
+  </ul>
+</nav>
+
+<h1>New Songs</h1>
+<div class="container">
+  <div class="item">
+<div class="image">
+  <img src="C:\Users\chefa\Downloads\WhatsApp Image 2023-05-03 at 23.51.31.jpeg" alt="Music Image" style="width: 360px; height: 260px;margin-bottom: 50px;">
+  <div class="music-info"style="justify-content: space-around;">
+    <h3>  Song Name:  &nbsp;&nbsp;  Padatha Pattelam</h3>
+    <h3>    Movie Name: &nbsp;&nbsp;  Rudhran</h3>
+    <audio controls>
+      <source src="C:\Users\chefa\Downloads\Padatha Pattellam - Rudhran - Raghav Lawrence ! Tamil.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+</div>
+<button onclick="downloadMusic()" style="margin-top: 30px;">Download</button>
+
+  <div class="clearfix"></div>
+  
+  <div class="item">   
+<div class="image">
+     <img src="C:\Users\chefa\Downloads\WhatsApp Image 2023-05-03 at 23.51.27.jpeg" alt="Music Image"style="width: 360px; height: 260px;margin-bottom: 50px;">
+  <div class="music-info"style="justify-content: space-around;">
+    <h3>Song Name:  &nbsp;&nbsp;Aga Naga </h3>
+    <h3>Movie Name: &nbsp;&nbsp;PoninSelvan-2</h3>
+    <audio controls>
+      <source src="C:\Users\chefa\Downloads\Aga Naga Ponniyin - AR Rahman.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+</div>
+<button onclick="downloadMusic()" style="margin-top: 30px;">Download</button>
+  <div class="clearfix"></div>
+
+
+<div class="item">
+<div class="image">   
+   <img src="C:\Users\chefa\Downloads\WhatsApp Image 2023-05-03 at 23.51.32 (1).jpeg" alt="Music Image"style="width: 360px; height: 260px;margin-bottom: 50px;">
+  <div class="music-info"style="justify-content: space-around;">
+     <h3>Song Name: &nbsp;&nbsp;Mainaru Vetti</h3>
+    <h3>Movie Name: &nbsp;&nbsp;  Dasara</h3>
+    <audio controls>
+      <source src="C:\Users\chefa\Downloads\Mainaru Vetti Katti Machini - Mainaru Vetti Katti - Dasara ! Tamil.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+</div>
+<button onclick="downloadMusic()" style="margin-top: 30px;">Download</button>
+  <div class="clearfix"></div>
+
+
+<div class="item">
+<div class="image">
+  <img src="C:\Users\chefa\Downloads\WhatsApp Image 2023-05-04 at 12.57.36.jpeg" alt="Music Image"style="width: 360px; height: 260px;margin-bottom: 50px;">
+  <div class="music-info"style="justify-content: space-around;">
+     <h3>Song Name: &nbsp;&nbsp;Megham Karukatha</h3>
+    <h3>Movie Name: &nbsp;&nbsp;  Thiruchitrambalam</h3>
+    <audio controls>
+      <source src="C:\Users\chefa\Downloads\Megham Karukatha - Thiruchitrambalam.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+</div>
+<button onclick="downloadMusic()" style="margin-top: 30px;">Download</button>
+  <div class="clearfix"></div>
+
+<div class="item">
+<div class="image">
+<img src="C:\Users\chefa\Downloads\WhatsApp Image 2023-05-03 at 23.51.30.jpeg" alt="Music Image"style="width: 360px; height: 260px;margin-bottom: 50px;">
+  <div class="music-info"style="justify-content: space-around;"style="justify-content: space-around;">
+     <h3>Song Name: &nbsp;&nbsp; Jorthaale</h3>
+    <h3>Movie Name: &nbsp;&nbsp;    Rudhran</h3>
+    <audio controls>
+      <source src="C:\Users\chefa\Downloads\Jorthaale - Rudhran ! Raghava Lawrence.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+</div>
+<button onclick="downloadMusic()" style="margin-top: 30px;">Download</button>
+<div class="clearfix"></div>
+
+<div class="item">
+<div class="image">
+  <img src="C:\Users\chefa\Downloads\WhatsApp Image 2023-05-03 at 23.51.26.jpeg" alt="Music Image"style="width: 360px; height: 260px;margin-bottom: 50px;">
+  <div class="music-info"style="justify-content: space-around;">
+     <h3>Song Name: &nbsp;&nbsp;Osarattum Pthu Thala</h3>
+    <h3>Movie Name: &nbsp;&nbsp; Pathu Thala</h3>
+    <audio controls>
+      <source src="C:\Users\chefa\Downloads\Osarattum Pathu Thala - Pathu Thala.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+</div>
+<button onclick="downloadMusic()" style="margin-top: 30px;">Download</button>
+  <div class="clearfix"></div>
+
+<div class="item">
+<div class="image">
+<img src="C:\Users\chefa\Downloads\WhatsApp Image 2023-05-04 at 14.18.36 (1).jpeg" alt="Music Image"style="width: 360px; height: 260px;margin-bottom: 50px;">
+  <div class="music-info"style="justify-content: space-around;">
+     <h3>Song Name: &nbsp;&nbsp;Thenmozhi</h3>
+    <h3>Movie Name: &nbsp;&nbsp;    Thiruchitrambalam</h3>
+    <audio controls>
+      <source src="C:\Users\chefa\Downloads\Thenmozhi Enthan Thenmozhi ! Thiruchitrambalam ! Thenmozhi Song.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+</div>
+<button onclick="downloadMusic()" style="margin-top: 30px;">Download</button>
+  <div class="clearfix"></div>
+
+
+<div class="item">
+<div class="image">
+  <img src="C:\Users\chefa\Downloads\WhatsApp Image 2023-05-03 at 23.51.29 (1).jpeg"  alt="Music Image"style="width: 360px; height: 260px;margin-bottom: 50px;">
+  <div class="music-info"style="justify-content: space-around;">
+     <h3>Song Name: &nbsp;&nbsp;Scene ah Scene</h3>
+    <h3>Movie Name: &nbsp;&nbsp; Maaveeran</h3>
+    <audio controls>
+      <source src="C:\Users\chefa\Downloads\Scene Ah Scene Ah Aanome - Scene Ah Scene Ah - Maaveeran ! Tamil.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+</div>
+<button onclick="downloadMusic()" style="margin-top: 30px;">Download</button>
+  <div class="clearfix"></div>
+
+<div class="item">
+<div class="image">
+  <img src="C:\Users\chefa\Downloads\WhatsApp Image 2023-05-03 at 23.51.29.jpeg" alt="Music Image"style="width: 360px; height: 260px;margin-bottom: 50px;">
+  <div class="music-info"style="justify-content: space-around;">
+     <h3>Song Name: &nbsp;&nbsp;Raawadi</h3>
+    <h3>Movie Name: &nbsp;&nbsp; Pathu Thala</h3>
+    <audio controls>
+      <source src="C:\Users\chefa\Downloads\Raawadi - Pathu Thala ! Tamil.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+</div>
+<button onclick="downloadMusic()" style="margin-top: 30px;">Download</button>
+  <div class="clearfix"></div>
+
+<div class="item">
+<div class="image">
+  <img src="C:\Users\chefa\Downloads\WhatsApp Image 2023-05-04 at 12.57.38.jpeg" alt="Music Image"style="width: 360px; height: 260px;margin-bottom: 50px;">
+  <div class="music-info"style="justify-content: space-around;">
+     <h3>Song Name: &nbsp;&nbsp;Kannukkule</h3>
+    <h3>Movie Name: &nbsp;&nbsp; Sita-Ramam</h3>
+    <audio controls>
+      <source src="C:\Users\chefa\Downloads\Kannukulle - Sita Ramam.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+</div>
+<button onclick="downloadMusic()" style="margin-top: 30px;">Download</button>
+<div class="clearfix"></div>
+
+
+
+
+</div>
+

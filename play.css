@@ -1,0 +1,32 @@
+body{
+	background-image: linear-gradient(to bottom right, #ff6600 0%, #66ffcc 100%); 
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: auto;
+	height: auto;
+}
+
+   .container {
+            overflow: auto;
+        }
+     .item {
+            float: left;
+            margin-right: 10px;
+        }
+        
+        .image {
+            float: left;
+            margin-left: 200px;
+        }
+        
+        .music-info {
+            overflow: auto;
+            float: right;
+            margin-left: 200px;
+        }
+        
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }

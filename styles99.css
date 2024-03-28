@@ -1,0 +1,56 @@
+*{
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+	font-family:'poppins';
+}
+nav{
+	background-color:mediumpurple;
+	padding:10px 25px;
+	background-size: 100%;
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
+}
+.logo img{
+	width:200px;
+}
+.navlinks{
+	display:flex;
+	align-item:center;
+}
+.navlinks li{
+	list-style:none;
+}
+.navlinks li a{
+	font-size:20px;
+	text-decoration:none;
+	color:floralwhite;
+	padding:0 30px;
+}
+body{
+	width:100%;
+	height:100%;
+	background:url("C:/Users/chefa/Downloads/WhatsApp Image 2023-05-05 at 01.00.50.jpeg");
+	background-repeat:no-repeat;
+	background-position:relative;
+	background-size:cover;
+	background-attachment:fixed;
+}
+.links{
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 200px;
+	padding-bottom:100px ;
+}
+.links li{
+	list-style: none;
+}
+.links li a{
+	font-size:30px;
+	text-decoration:none;
+	color:whitesmoke;
+	font-family:cursive;
+	background-color:black;
+}

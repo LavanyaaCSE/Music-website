@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<head>
+	<style>
+	   .login-container,
+.register-container {
+  max-width: 360px;
+  margin-left: 375px;
+  margin-top: 60px;
+  padding: 150px;
+  border: 1px solid #ccc;
+  background-image:linear-gradient(to bottom left, #ffccff 0%, #ff6600 100%);
+}
+
+h2 {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 40px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 360px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  padding: 20px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#login-message,
+#register-message {
+  text-align: center;
+  margin-top: 10px;
+}
+
+	</style>
+	<title>login</title>
+</head>
+<body>
+		<div class="login-container">
+  <h2>Login</h2>
+  <form id="login-form">
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button type="submit">Login</button>
+  </form>
+  <p id="login-message"></p>
+</div>
+
+
+	<script>
+		document.getElementById("login-form").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  var username = document.getElementById("username").value;
+  var password = document.getElementById("password").value;
+
+  var storedData = JSON.parse(localStorage.getItem("registeredUsers")) || [];
+  var user = storedData.find(function(item) {
+    return item.username === username && item.password === password;
+  });
+
+  if (user) {
+    document.getElementById("login-message").textContent = "Login successful!";
+  } else {
+    document.getElementById("login-message").textContent = "Invalid username or password";
+  }
+});
+
+document.getElementById("register-form").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  var username = document.getElementById("register-username").value;
+  var password = document.getElementById("register-password").value;
+
+  var storedData = JSON.parse(localStorage.getItem("registeredUsers")) || [];
+  var existingUser = storedData.find(function(item) {
+    return item.username === username;
+  });
+
+  if (existingUser) {
+    document.getElementById("register-message").textContent = "Username already exists!";
+  } else {
+    var newUser = { username: username, password: password };
+    storedData.push(newUser);
+    localStorage.setItem("registeredUsers", JSON.stringify(storedData));
+    document.getElementById("register-message").textContent = "Registration successful!";
+  }
+});
+
+	</script>

@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Discover new music and connect with your favorite artists on our music website. Listen to the latest hits, create your own playlists, and stay up-to-date on music news and events. Join our community of music lovers today! and jump into the tamil music vibes">
+  <meta name="keywords" content="Tamil movie songs download,Tamil new hits song ringtones, AR Rahman albums and tracks, Ilaiyaraaja hits collection, Tamil artists hits,Tamil music streaming apps">
+  <meta name="author" content="Lavanyaa A">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My Music</title>
+	<style >
+		.navbar {
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+h2, h3 {
+  margin-bottom: 10px;
+}
+
+audio {
+  margin-bottom: 10px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.menu li {
+  margin-right: 10px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #333;
+   margin-left: 25px;
+      font-size: 20px;
+
+}
+
+.navbarse {
+  background-color: #f1f1f1;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.search-bar button {
+  padding: 5px 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.nav {
+  list-style-type: none;
+  margin-left: 30px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.nav li {
+  margin-right: 10px;
+}
+
+.nav li a {
+  text-decoration: none;
+  color: #333;
+   margin-left: 25px;
+   font-size: 20px;
+}
+#cloudsCanvas {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+
+body.search-result {
+ background-color: linear-gradient(to bottom right, #ff3399 0%, #0099ff 100%);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+h2, h3 {
+  margin-bottom: 10px;
+}
+
+audio {
+  margin-bottom: 10px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  padding-left: 120px;
+  padding-right: 120px;
+}
+
+.mySlides {
+  display: none;
+}
+
+.mySlides img {
+  width: 100%;
+  height: 300px;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+  z-index: 1;
+  text-decoration: none;
+  margin-left: 120px;
+  margin-right: 120px;
+  
+}
+
+.prev {
+  left: 0
+}
+
+.next {
+  right: 0;
+}
+
+.image-gallery {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.image-container {
+  flex-shrink: 0;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.image-container:last-child {
+  margin-right: 0;
+}
+
+
+.arrow-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 90px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding-top: 325px;
+  color: rgba(60, 60, 60, 0.0);
+}
+
+.prev-button {
+  left: 10px;
+}
+
+.next-button {
+  right: 10px;
+}
+
+
+
+.image-container img {
+  cursor: pointer;
+  border: 8px solid black;
+}
+
+.image-container audio {
+  display: none;
+}
+
+.footer{ background-color: black; color:#555; }
+
+
+
+
+	</style>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+</head>
+<body>
+	<nav class="navbarse">
+		<img src="C:\Users\chefa\Downloads\WhatsApp Image 2023-05-04 at 21.46.06.jpeg" alt="Logo" style="height: 40px;width: 90px;
+  margin-right: 10px; text-align: left;margin-right: 100px;">
+  <form id="search-form">
+
+    <input type="text" id="search-input" placeholder="Search song...">
+    <button type="button" onclick="search()">Search</button>
+  </form>
+  <div class="login">
+  	<ul class="nav">
+  		<li><a href="loginf.html">login</a></li>
+  		<li><a href="sub.html">subscribe</a></li>
+  		<li><a href="loginform.html">register</a></li>
+  	</ul>
+  </div>
+</nav>
+
+<nav class="navbar">
+  <ul class="menu">
+    <li><a href="mymusic.html" style="margin-left: 300px;">All</a></li>
+    <li><a href="trending.html" >Trending Now</a></li>
+    <li><a href="oldsongs.html">Old Songs</a></li>
+    <li><a href="newsongs.html">New Songs</a></li>
+    <li><a href="topartists.html">Top Artists</a></li>
+    <li><a href="topplaylist.html">Top Playlist</a></li>
+    <li><a href="games.html">Games</a></li>
+    <li><a href="downloaded.html">Download</a></li>
+  </ul>
+</nav>
+<canvas id="cloudsCanvas"></canvas>
+
+
+<div class="slideshow-container">
+    <div class="mySlides">
+      <img src="C:\Users\chefa\Downloads\WhatsApp Image 2023-05-04 at 21.46.07 (1).jpeg" alt="Image 1">
+    </div>
+
+    <div class="mySlides">
+      <img src="C:\Users\chefa\Downloads\WhatsApp Image 2023-05-04 at 21.46.05.jpeg" alt="Image 2">
+    </div>
+
+    <div class="mySlides">
+      <img src="C:\Users\chefa\Downloads\WhatsApp Image 2023-05-04 at 21.46.07.jpeg" alt="Image 3">
+    </div>
+
+ <div class="mySlides">
+      <img src="C:\Users\chefa\Downloads\WhatsApp Image 2023-05-04 at 21.46.09.jpeg" alt="Image 1">
+    </div>
+
+    <div class="mySlides">
+      <img src="C:\Users\chefa\Downloads\WhatsApp Image 2023-05-04 at 21.46.08.jpeg" alt="Image 2">
+    </div>
+
+    <div class="mySlides">
+      <img src="C:\Users\chefa\Downloads\WhatsApp Image 2023-05-04 at 21.46.08 (1).jpeg" alt="Image 3">
+    </div>
+    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+    <a class="next" onclick="changeSlide(1)">&#10095;</a>
+  </div>
+
+<h1>New Releases:</h1><br>
+
+<div class="image-gallery">
+	<button class="arrow-button prev-button">&#10094;</button>
+	<div class="image-container">
+<img src="C:\Users\chefa\Downloads\WhatsApp Image 2023-05-03 at 23.51.31.jpeg" style="height: 200px;" data-src="C:\Users\chefa\Downloads\Padatha Pattellam - Rudhran - Raghav Lawrence ! Tamil.mp3">
+
+<audio id="audioPlayer">
+    <source src="C:\Users\chefa\Downloads\Padatha Pattellam - Rudhran - Raghav Lawrence ! Tamil.mp3" type="audio/mpeg">
+  </audio>
+
+  </div>
+
+    <div class="image-container">
+<img src="C:\Users\chefa\Downloads\WhatsApp Image 2023-05-03 at 23.51.27.jpeg" style="width: 260px;
+  height: 200px;margin-left: 10px; justify-content: space-between;"data-src="C:\Users\chefa\Downloads\Aga Naga Ponniyin - AR Rahman.mp3">
+
+  <audio id="audioPlayer">
+    <source src="C:\Users\chefa\Downloads\Aga Naga Ponniyin - AR Rahman.mp3" type="audio/mpeg">
+  </audio>
+
+  </div>
+
+
+    <div class="image-container">
+<img src="C:\Users\chefa\Downloads\WhatsApp Image 2023-05-03 at 23.51.32 (1).jpeg" data-src="C:\Users\chefa\Downloads\Mainaru Vetti Katti Machini - Mainaru Vetti Katti - Dasara ! Tamil.mp3" style="height: 200px;margin-left: 10px;margin-left: 10px;">
+
+<audio id="audioPlayer">
+    <source src="C:\Users\chefa\Downloads\Mainaru Vetti Katti Machini - Mainaru Vetti Katti - Dasara ! Tamil.mp3" type="audio/mpeg">
+  </audio>
+
+  </div>
+
+
+     <div class="image-container">
+<img src="C:\Users\chefa\Downloads\WhatsApp Image 2023-05-03 at 23.51.32.jpeg"  data-src="C:\Users\chefa\Downloads\Vazhi Neduga Kattumalli - Vazhi Neduga Kattu Malli Song ! Viduthalai ! Ilaiyaraaja.mp3"  style="width: 260px;
+  height: 200px;margin-left: 10px;">
+
+  <audio id="audioPlayer">
+    <source src="C:\Users\chefa\Downloads\Vazhi Neduga Kattumalli - Vazhi Neduga Kattu Malli Song ! Viduthalai ! Ilaiyaraaja.mp3" type="audio/mpeg">
+  </audio>
+
+  </div>
+
+
+      <div class="image-container">
+<img src="C:\Users\chefa\Downloads\WhatsApp Image 2023-05-03 at 23.51.24.jpeg"  data-src="C:\Users\chefa\Downloads\Veera Raja Veera Raja Veera - PS2 ! Tamil.mp3" style="
+  height: 200px;width: 260px;margin-left: 10px;">
+
+  <audio id="audioPlayer">
+    <source src="C:\Users\chefa\Downloads\Veera Raja Veera Raja Veera - PS2 ! Tamil.mp3" type="audio/mpeg">
+  </audio>
+
+  </div>
+
+      <div class="image-container">
+<img src="C:\Users\chefa\Downloads\WhatsApp Image 2023-05-03 at 23.51.30.jpeg"  data-src="C:\Users\chefa\Downloads\Jorthaale - Rudhran ! Raghava Lawrence.mp3" style="height: 200px;margin-left: 10px;">
+
+<audio id="audioPlayer">
+    <source src="C:\Users\chefa\Downloads\Jorthaale - Rudhran ! Raghava Lawrence.mp3" type="audio/mpeg">
+  </audio>
+
+  </div>
+
+
+
+
+
+  	<div class="image-container">
+<img src="C:\Users\chefa\Downloads\WhatsApp Image 2023-05-03 at 23.51.26.jpeg" data-src="C:\Users\chefa\Downloads\Osarattum Pathu Thala - Pathu Thala.mp3" style="height: 200px;width: 260px;margin-left: 10px;">
+
+<audio id="audioPlayer">
+    <source src="C:\Users\chefa\Downloads\Osarattum Pathu Thala - Pathu Thala.mp3" type="audio/mpeg">
+  </audio>
+
+  </div>
+
+  	<div class="image-container">
+<img src="C:\Users\chefa\Downloads\WhatsApp Image 2023-05-03 at 23.51.29.jpeg" data-src="C:\Users\chefa\Downloads\Raawadi - Pathu Thala ! Tamil.mp3" style="height: 200px;width: 260px;margin-left: 10px;">
+
+<audio id="audioPlayer">
+    <source src="C:\Users\chefa\Downloads\Raawadi - Pathu Thala ! Tamil.mp3" type="audio/mpeg">
+  </audio>
+
+  </div>
+
+  	<div class="image-container">
+<img src="C:\Users\chefa\Downloads\WhatsApp Image 2023-05-03 at 23.51.28.jpeg" data-src="C:\Users\chefa\Downloads\Ninaivirukka Song - Pathu Thala ! Shakthisree Gopalan.mp3" style="height: 200px;width: 260px;margin-left: 10px;">
+
+<audio id="audioPlayer">
+    <source src="C:\Users\chefa\Downloads\Ninaivirukka Song - Pathu Thala ! Shakthisree Gopalan.mp3" type="audio/mpeg">
+  </audio>
+
+  </div>
+
+  	<div class="image-container">
+<img src= "C:\Users\chefa\Downloads\WhatsApp Image 2023-05-03 at 23.51.29 (1).jpeg" data-src="C:\Users\chefa\Downloads\Scene Ah Scene Ah Aanome - Scene Ah Scene Ah - Maaveeran ! Tamil.mp3" style="height: 200px;width: 260px;margin-left: 10px;">
+
+<audio id="audioPlayer">
+    <source src="C:\Users\chefa\Downloads\Scene Ah Scene Ah Aanome - Scene Ah Scene Ah - Maaveeran ! Tamil.mp3" type="audio/mpeg">
+  </audio>
+
+  </div>
+
+<button class="arrow-button next-button">&#10095;</button>
+
+</div>
+<br><br>
+
+<h1>Top Hits</h1><br>
+
+
+
+<div class="image-gallery">
+	<button class="arrow-button prev-button">&#10094;</button>
+	<div class="image-container">
+<img src="C:\Users\chefa\Downloads\WhatsApp Image 2023-05-04 at 12.57.38 (1).jpeg"  data-src="C:\Users\chefa\Downloads\Thaai Kelavi - Thiruchitrambalam ! Dhanush ! Tamil Song.mp3" style="height: 200px;">
+
+<audio id="audioPlayer">
+    <source src="C:\Users\chefa\Downloads\Thaai Kelavi - Thiruchitrambalam ! Dhanush ! Tamil Song.mp3" type="audio/mpeg">
+  </audio>
+
+  </div>
+
+    <div class="image-container">
+<img src="C:\Users\chefa\Downloads\WhatsApp Image 2023-05-04 at 12.57.39.jpeg"  data-src="C:\Users\chefa\Downloads\Veyyon Silli (1).mp3"  style="width: 260px;
+  height: 200px;margin-left: 10px; justify-content: space-between;">
+
+  <audio id="audioPlayer">
+    <source src="C:\Users\chefa\Downloads\Veyyon Silli (1).mp3" type="audio/mpeg">
+  </audio>
+
+  </div>
+
+
+    <div class="image-container">
+<img src="C:\Users\chefa\Downloads\WhatsApp Image 2023-05-04 at 12.57.38.jpeg"  data-src="C:\Users\chefa\Downloads\Kannukulle - Sita Ramam.mp3" style="height: 200px;margin-left: 10px;margin-left: 10px;">
+
+<audio id="audioPlayer">
+    <source src="C:\Users\chefa\Downloads\Kannukulle - Sita Ramam.mp3" type="audio/mpeg">
+  </audio>
+
+  </div>
+
+
+     <div class="image-container">
+<img src="C:\Users\chefa\Downloads\WhatsApp Image 2023-05-04 at 12.57.37.jpeg" data-src="C:\Users\chefa\Downloads\Jimikki Ponnu - Tamil.mp3" style="width: 260px;
+  height: 200px;margin-left: 10px;">
+
+  <audio id="audioPlayer">
+    <source src="C:\Users\chefa\Downloads\Jimikki Ponnu - Tamil.mp3" type="audio/mpeg">
+  </audio>
+
+  </div>
+
+
+      <div class="image-container">
+<img src= "C:\Users\chefa\Downloads\WhatsApp Image 2023-05-04 at 12.57.36.jpeg" data-src="C:\Users\chefa\Downloads\Megham Karukatha - Thiruchitrambalam.mp3" style="
+  height: 200px;width: 260px;margin-left: 10px;">
+
+  <audio id="audioPlayer">
+    <source src="C:\Users\chefa\Downloads\Megham Karukatha - Thiruchitrambalam.mp3" type="audio/mpeg">
+  </audio>
+
+  </div>
+
+      <div class="image-container">
+<img src="C:\Users\chefa\Downloads\WhatsApp Image 2023-05-04 at 12.57.35 (1).jpeg"  data-src="C:\Users\chefa\Downloads\Don - Bae Song.mp3" style="height: 200px;margin-left: 10px;">
+
+<audio id="audioPlayer">
+    <source src="C:\Users\chefa\Downloads\Don - Bae Song.mp3" type="audio/mpeg">
+  </audio>
+
+  </div>
+
+
+  	<div class="image-container">
+<img src="C:\Users\chefa\Downloads\WhatsApp Image 2023-05-04 at 12.57.35.jpeg" data-src="C:\Users\chefa\Downloads\Ennai Vittu Uyir Ponalum.mp3" style="height: 200px;width: 260px;margin-left: 10px;">
+
+<audio id="audioPlayer">
+    <source src="C:\Users\chefa\Downloads\Ennai Vittu Uyir Ponalum.mp3" type="audio/mpeg">
+  </audio>
+
+  </div>
+
+  	<div class="image-container">
+<img src="C:\Users\chefa\Downloads\WhatsApp Image 2023-05-04 at 12.57.34.jpeg" data-src="C:\Users\chefa\Downloads\Malli Poo Vachi Song.mp3" type="audio/mpeg" style="height: 200px;width: 260px;margin-left: 10px;">
+
+<audio id="audioPlayer">
+    <source src="C:\Users\chefa\Downloads\Malli Poo Vachi Song.mp3" type="audio/mpeg">
+  </audio>
+
+  </div>
+
+  	<div class="image-container">
+<img src="C:\Users\chefa\Downloads\WhatsApp Image 2023-05-04 at 12.57.32.jpeg" data-src="C:\Users\chefa\Downloads\Vaa Vaathi Song - Vaathi ! Tamil.mp3" style="height: 200px;width: 260px;margin-left: 10px;">
+
+<audio id="audioPlayer">
+    <source src="C:\Users\chefa\Downloads\Vaa Vaathi Song - Vaathi ! Tamil.mp3" type="audio/mpeg">
+  </audio>
+
+  </div>
+
+  	<div class="image-container">
+<img src="C:\Users\chefa\Downloads\WhatsApp Image 2023-05-04 at 12.57.29.jpeg" data-src="C:\Users\chefa\Downloads\Ponni Nadhi ! Ponniyan Selvan ! Tamil ! Song.mp3" style="height: 200px;width: 260px;margin-left: 10px;">
+
+<audio id="audioPlayer">
+    <source src="C:\Users\chefa\Downloads\Ponni Nadhi ! Ponniyan Selvan ! Tamil ! Song.mp3" type="audio/mpeg">
+  </audio>
+
+  </div>
+
+<button class="arrow-button next-button">&#10095;</button>
+
+</div>
+
+<br><br>
+<h1>Evergreen</h1><br>
+
+
+<div class="image-gallery">
+	<button class="arrow-button prev-button">&#10094;</button>
+	<div class="image-container">
+<img src="C:\Users\chefa\Downloads\WhatsApp Image 2023-05-04 at 13.03.42.jpeg"  data-src="C:\Users\chefa\Downloads\Kadhal Kaditham.mp3" style="height: 200px;">
+
+<audio id="audioPlayer">
+    <source src="C:\Users\chefa\Downloads\Kadhal Kaditham.mp3" type="audio/mpeg">
+  </audio>
+
+  </div>
+
+    <div class="image-container">
+<img src= "C:\Users\chefa\Downloads\WhatsApp Image 2023-05-04 at 13.03.40.jpeg" data-src="C:\Users\chefa\Downloads\Unna Vida - Virumandi.mp3" style="width: 260px;
+  height: 200px;margin-left: 10px; justify-content: space-between;">
+
+  <audio id="audioPlayer">
+    <source src="C:\Users\chefa\Downloads\Unna Vida - Virumandi.mp3" type="audio/mpeg">
+  </audio>
+
+  </div>
+
+
+    <div class="image-container">
+<img src= "C:\Users\chefa\Downloads\WhatsApp Image 2023-05-04 at 13.03.41.jpeg" data-src="C:\Users\chefa\Downloads\Sundari Kannaal Oru Sethi - Thalapathi ! Rajinikanth ! Tamil Song.mp3" style="height: 200px;margin-left: 10px;margin-left: 10px;">
+
+<audio id="audioPlayer">
+    <source src="C:\Users\chefa\Downloads\Sundari Kannaal Oru Sethi - Thalapathi ! Rajinikanth ! Tamil Song.mp3" type="audio/mpeg">
+  </audio>
+
+  </div>
+
+
+     <div class="image-container">
+<img src= "C:\Users\chefa\Downloads\WhatsApp Image 2023-05-04 at 13.03.43.jpeg" data-src="C:\Users\chefa\Downloads\Mudhalvan - Kurukku Siruthavale.mp3" style="width: 260px;
+  height: 200px;margin-left: 10px;">
+
+  <audio id="audioPlayer">
+    <source src="C:\Users\chefa\Downloads\Mudhalvan - Kurukku Siruthavale.mp3" type="audio/mpeg">
+  </audio>
+
+  </div>
+
+
+      <div class="image-container">
+<img src= "C:\Users\chefa\Downloads\WhatsApp Image 2023-05-04 at 13.03.39.jpeg" data-src="C:\Users\chefa\Downloads\Senthoora Poove.mp3"  style="
+  height: 200px;width: 260px;margin-left: 10px;">
+
+  <audio id="audioPlayer">
+    <source src="C:\Users\chefa\Downloads\Senthoora Poove.mp3"  type="audio/mpeg">
+  </audio>
+
+  </div>
+
+      <div class="image-container">
+<img src= "C:\Users\chefa\Downloads\thendral.jpg" data-src="C:\Users\chefa\Downloads\Thendral Vanthu Theendum Pothu (1).mp3" style="height: 200px;margin-left: 10px;">
+
+<audio id="audioPlayer">
+    <source src="C:\Users\chefa\Downloads\Thendral Vanthu Theendum Pothu (1).mp3" type="audio/mpeg">
+  </audio>
+
+  </div>
+
+
+
+
+
+  	<div class="image-container">
+<img src="C:\Users\chefa\Downloads\rakkama.jpg" data-src="C:\Users\chefa\Downloads\Kattu Kuyilu - Thalapathi Movie Song.mp3" style="height: 200px;width: 260px;margin-left: 10px;">
+
+<audio id="audioPlayer">
+    <source src="C:\Users\chefa\Downloads\Kattu Kuyilu - Thalapathi Movie Song.mp3" type="audio/mpeg">
+  </audio>
+
+  </div>
+
+  	<div class="image-container">
+<img src= "C:\Users\chefa\Downloads\WhatsApp Image 2023-05-04 at 13.06.50.jpeg" data-src="C:\Users\chefa\Downloads\Sotta Sotta Nanaiyudhu.mp3" style="height: 200px;width: 260px;margin-left: 10px;">
+
+<audio id="audioPlayer">
+    <source src="C:\Users\chefa\Downloads\Sotta Sotta Nanaiyudhu.mp3" type="audio/mpeg">
+  </audio>
+
+  </div>
+
+  	<div class="image-container">
+<img src= "C:\Users\chefa\Downloads\WhatsApp Image 2023-05-04 at 13.06.51.jpeg" data-src="C:\Users\chefa\Downloads\Kadhalar Dhinam - Kadhal Ennum.mp3" style="height: 200px;width: 260px;margin-left: 10px;">
+
+<audio id="audioPlayer">
+    <source src="C:\Users\chefa\Downloads\Kadhalar Dhinam - Kadhal Ennum.mp3" type="audio/mpeg">
+  </audio>
+
+  </div>
+
+  	<div class="image-container">
+<img src= "C:\Users\chefa\Downloads\WhatsApp Image 2023-05-04 at 13.03.38.jpeg" data-src="C:\Users\chefa\Downloads\Enake Enaka - Jeans ! (Enake enaka) Tamil Romantic Song.mp3" style="height: 200px;width: 260px;margin-left: 10px;">
+
+<audio id="audioPlayer">
+    <source src="C:\Users\chefa\Downloads\Enake Enaka - Jeans ! (Enake enaka) Tamil Romantic Song.mp3" type="audio/mpeg">
+  </audio>
+
+  </div>
+
+<button class="arrow-button next-button">&#10095;</button>
+
+</div>
+
+<br><br>
+<h1>2000's Hits</h1><br>
+
+
+<div class="image-gallery">
+	<button class="arrow-button prev-button">&#10094;</button>
+	<div class="image-container">
+<img src="C:\Users\chefa\Downloads\WhatsApp Image 2023-05-04 at 13.18.12.jpeg"  data-src="C:\Users\chefa\Downloads\Nenjinile Nenjinile-Female.mp3" style="height: 200px;">
+
+<audio id="audioPlayer">
+    <source src="C:\Users\chefa\Downloads\Nenjinile Nenjinile-Female.mp3" type="audio/mpeg">
+  </audio>
+
+  </div>
+
+    <div class="image-container">
+<img src="C:\Users\chefa\Downloads\WhatsApp Image 2023-05-04 at 13.15.36 (2).jpeg"  data-src="C:\Users\chefa\Downloads\Kanmoodi Thirakkum Pothu.mp3" style="width: 260px;
+  height: 200px;margin-left: 10px; justify-content: space-between;">
+
+  <audio id="audioPlayer">
+    <source src="C:\Users\chefa\Downloads\Kanmoodi Thirakkum Pothu.mp3" type="audio/mpeg">
+  </audio>
+
+  </div>
+
+
+    <div class="image-container">
+<img src="C:\Users\chefa\Downloads\WhatsApp Image 2023-05-04 at 13.15.34 (1).jpeg" data-src="C:\Users\chefa\Downloads\kavithaiye theriyuma.mp3" style="height: 200px;margin-left: 10px;margin-left: 10px;">
+
+<audio id="audioPlayer">
+    <source src="C:\Users\chefa\Downloads\kavithaiye theriyuma.mp3" type="audio/mpeg">
+  </audio>
+
+  </div>
+
+
+     <div class="image-container">
+<img src="C:\Users\chefa\Downloads\WhatsApp Image 2023-05-04 at 13.15.35.jpeg"  data-src="C:\Users\chefa\Downloads\Newyork Nagaram.mp3" style="width: 260px;
+  height: 200px;margin-left: 10px;">
+
+  <audio id="audioPlayer">
+    <source src="C:\Users\chefa\Downloads\Newyork Nagaram.mp3" type="audio/mpeg">
+  </audio>
+
+  </div>
+
+
+      <div class="image-container">
+<img src= "C:\Users\chefa\Downloads\WhatsApp Image 2023-05-04 at 13.15.36 (1).jpeg" data-src="C:\Users\chefa\Downloads\Yakkai Thiri - Aaytha Ezhuthu.mp3" style="
+  height: 200px;width: 260px;margin-left: 10px;">
+
+  <audio id="audioPlayer">
+    <source src="C:\Users\chefa\Downloads\Yakkai Thiri - Aaytha Ezhuthu.mp3" type="audio/mpeg">
+  </audio>
+
+  </div>
+
+      <div class="image-container">
+<img src= "C:\Users\chefa\Downloads\WhatsApp Image 2023-05-04 at 13.03.42.jpeg" data-src="C:\Users\chefa\Downloads\Kadhal Kaditham.mp3" style="height: 200px;margin-left: 10px;">
+
+<audio id="audioPlayer">
+    <source src="C:\Users\chefa\Downloads\Kadhal Kaditham.mp3" type="audio/mpeg">
+  </audio>
+
+  </div>
+
+
+
+
+
+  	<div class="image-container">
+<img src="C:\Users\chefa\Downloads\WhatsApp Image 2023-05-04 at 13.15.36.jpeg" data-src="C:\Users\chefa\Downloads\Nee Paartha Vizhigal.mp3" style="height: 200px;width: 260px;margin-left: 10px;">
+
+<audio id="audioPlayer">
+    <source src="C:\Users\chefa\Downloads\Nee Paartha Vizhigal.mp3" type="audio/mpeg">
+  </audio>
+
+  </div>
+
+  	<div class="image-container">
+<img src="C:\Users\chefa\Downloads\WhatsApp Image 2023-05-04 at 13.06.51.jpeg" data-src="C:\Users\chefa\Downloads\Kadhalar Dhinam - Kadhal Ennum.mp3" style="height: 200px;width: 260px;margin-left: 10px;">
+
+<audio id="audioPlayer">
+    <source src="C:\Users\chefa\Downloads\Kadhalar Dhinam - Kadhal Ennum.mp3" type="audio/mpeg">
+  </audio>
+
+  </div>
+
+  	<div class="image-container">
+<img src="C:\Users\chefa\Downloads\WhatsApp Image 2023-05-04 at 13.15.35 (1).jpeg" data-src="C:\Users\chefa\Downloads\Vennilave Vennilave.mp3" style="height: 200px;width: 260px;margin-left: 10px;">
+
+<audio id="audioPlayer">
+    <source src="C:\Users\chefa\Downloads\Vennilave Vennilave.mp3" type="audio/mpeg">
+  </audio>
+
+  </div>
+
+  	<div class="image-container">
+<img src="C:\Users\chefa\Downloads\WhatsApp Image 2023-05-04 at 13.03.38.jpeg"  data-src="C:\Users\chefa\Downloads\Enake Enaka - Jeans ! (Enake enaka) Tamil Romantic Song.mp3" style="height: 200px;width: 260px;margin-left: 10px;">
+
+<audio id="audioPlayer">
+    <source src="C:\Users\chefa\Downloads\Enake Enaka - Jeans ! (Enake enaka) Tamil Romantic Song.mp3" type="audio/mpeg">
+  </audio>
+
+  </div>
+
+<button class="arrow-button next-button">&#10095;</button>
+
+</div>
+
+
+
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h3>About Us</h3>
+        <p>We are a music website dedicated to bringing you the latest news, reviews, and interviews from the world of music.</p>
+      </div>
+      <div class="col-md-6">
+        <h3>Get in Touch</h3>
+        <ul class="list-unstyled">
+          <li><i class="fa fa-envelope"></i> info@musicwebsite.com</li>
+          <li><i class="fa fa-phone"></i> 213-323-310</li>
+          <li><i class="fa fa-map-marker"></i>NO 72 Los Angels USA</li>
+          <li>&copy;: 2023 tamilmusic.com. All rights reserverd</li> 
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script >
+	
+	function search() {
+  var query = document.getElementById('search-input').value;
+
+  
+  var searchWindow = window.open("", "_blank", "width=800, height=600");
+
+
+  var content = "<html><head><title>Song Details</title>";
+  content += "<link rel='stylesheet' href='style.css'>";
+  content += "</head><body>";
+  content += "<h2>Search Result for: " + query + "</h2>";
+
+  var songTitle = "Srivalli Song";
+  var audioSource =  "C:/Users/chefa/Downloads/Srivalli - Sid Sriram.mp3";
+  var imageSource = "C:/Users/chefa/Downloads/sid.jpg";
+
+  
+  content += "<h3>" + songTitle + "</h3>";
+
+  
+  content += "<audio controls><source src='" + audioSource + "' type='audio/mpeg'></audio>";
+
+ 
+  content += "<img src='" + imageSource + "' alt='Song Image'>";
+
+  content += "</body></html>";
+
+  
+  searchWindow.document.write(content);
+  searchWindow.document.close();
+}
+
+
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  const slides = document.getElementsByClassName("mySlides");
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  slideIndex++;
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+
+  slides[slideIndex - 1].style.display = "block";
+  setTimeout(showSlides, 2000); // Change slide every 2 seconds
+}
+
+function changeSlide(n) {
+  slideIndex += n;
+  showSlides();
+}
+
+
+
+
+
+var canvas = document.getElementById("cloudsCanvas");
+var ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+var clouds = [];
+
+function Cloud(x, y, radius, color) {
+  this.x = x;
+  this.y = y;
+  this.radius = radius;
+  this.color = color;
+  this.speed = Math.random() * 2 + 1;
+}
+
+Cloud.prototype.draw = function() {
+  ctx.beginPath();
+  ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+  ctx.fillStyle = this.color;
+  ctx.fill();
+  ctx.closePath();
+};
+
+Cloud.prototype.update = function() {
+  this.x -= this.speed;
+  if (this.x + this.radius < 0) {
+    this.x = canvas.width + this.radius;
+  }
+};
+
+function createClouds() {
+  for (var i = 0; i < 50; i++) {
+    var x = Math.random() * canvas.width;
+    var y = Math.random() * canvas.height;
+    var radius = Math.random() * 40 + 10;
+    var color = "rgba(" + Math.floor(Math.random() * 256) + "," + Math.floor(Math.random() * 256) + "," + Math.floor(Math.random() * 256) + "," + (Math.random() * 0.6 + 0.4) + ")";
+    clouds.push(new Cloud(x, y, radius, color));
+  }
+}
+
+function animateClouds() {
+  requestAnimationFrame(animateClouds);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  for (var i = 0; i < clouds.length; i++) {
+    clouds[i].draw();
+    clouds[i].update();
+  }
+}
+
+createClouds();
+animateClouds();
+
+
+
+ 
+
+
+const scrollContainer = document.querySelector(".scrollable-container");
+const prevButton = document.querySelector(".prev-button");
+const nextButton = document.querySelector(".next-button");
+
+prevButton.addEventListener("click", scrollGallery.bind(null, -1));
+nextButton.addEventListener("click", scrollGallery.bind(null, 1));
+
+function scrollGallery(direction) {
+  const scrollAmount = direction * (scrollContainer.offsetWidth / 2);
+  scrollContainer.scrollBy({
+    left: scrollAmount,
+    behavior: "smooth"
+  });
+}
+
+
+var currentAudio = null;
+
+        function playSong() {
+            var songUrl = event.target.getAttribute('data-src');
+
+            if (currentAudio && !currentAudio.paused) {
+                if (currentAudio.src === songUrl) {
+                    currentAudio.pause();
+                    return;
+                }
+                currentAudio.pause();
+            }
+
+            if (currentAudio && currentAudio.src !== songUrl) {
+                currentAudio.src = songUrl;
+            } else if (!currentAudio) {
+                currentAudio = new Audio(songUrl);
+            }
+
+            currentAudio.play();
+        }
+
+        var images = document.querySelectorAll('.image-container img');
+        for (var i = 0; i < images.length; i++) {
+            images[i].addEventListener('click', playSong);
+        }
+
+</script>

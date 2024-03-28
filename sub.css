@@ -1,0 +1,185 @@
+body{
+	background-image:linear-gradient(to bottom left, #660033 0%, #9900cc 100%);;
+}
+.form{
+	font-size:30px;
+	font-family: serif;
+	color:white;
+	text-align: center;
+}
+p{
+	color:whitesmoke;
+}
+.bubbles img{
+	width:50px;
+	animation: bubble 7s linear infinite;
+	background-color: rgba(60, 60, 60, 0.0);
+}
+.bubbles{
+	width:100%;
+	display:flex;
+	align-items:center;
+	justify-content: space-around;
+	position: absolute;
+	bottom:-100px;
+}
+@keyframes bubble{
+	0%{
+		transform:translateY(0);
+		opacity:0;
+	}
+	50%{
+		
+		opacity:1;
+	}
+	70%{
+		
+		opacity:1;
+	}
+	100%{
+		transform:translateY(-80vh);
+		opacity:0;
+	}
+}
+
+.bubbles img:nth-child(1){
+	animation-delay:2s;
+}
+.bubbles img:nth-child(2){
+	animation-delay:3s;
+}
+.bubbles img:nth-child(3){
+	animation-delay:4.5s;
+}
+.bubbles img:nth-child(4){
+	animation-delay:3s;
+}
+.bubbles img:nth-child(5){
+	animation-delay:6s;
+}
+.bubbles img:nth-child(6){
+	animation-delay:1s;
+}
+.bubbles img:nth-child(7){
+	animation-delay:7s;
+}
+
+.all{
+		display: flex;
+		flex-flow: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+	.all{
+		font-size: 35px;
+	}
+	p{
+		border:5px solid whitesmoke;
+	}
+	h3{
+		color: whitesmoke;
+		font-size: 25px;
+	}
+body {
+  font-family: Arial;
+  font-size: 17px;
+  padding: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+a {
+  color: #2196F3;
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}

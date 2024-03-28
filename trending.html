@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<head>
+  <style>
+    .navbar {
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+    .menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.menu li {
+  margin-right: 10px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #333;
+   margin-left: 25px;
+      font-size: 20px;
+
+}
+
+.navbarse {
+  background-color: #f1f1f1;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.search-bar button {
+  padding: 5px 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.nav {
+  list-style-type: none;
+  margin-left: 30px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.nav li {
+  margin-right: 10px;
+}
+
+.nav li a {
+  text-decoration: none;
+  color: #333;
+   margin-left: 25px;
+   font-size: 20px;
+}
+  </style>
+
+	<title>Trending Now</title>
+	<link rel="stylesheet" type="text/css" href="trend.css">
+	<script src="trend.js"></script>
+</head>
+<body>
+
+<nav class="navbarse">
+    <img src="C:\Users\chefa\Downloads\WhatsApp Image 2023-05-04 at 21.46.06.jpeg" alt="Logo" style="height: 40px;width: 90px;
+  margin-right: 10px; text-align: left;margin-right: 100px;">
+  <form id="search-form">
+
+    <input type="text" id="search-input" placeholder="Search song...">
+    <button type="button" onclick="search()">Search</button>
+  </form>
+  <div class="login">
+    <ul class="nav">
+      <li><a href="loginf.html">login</a></li>
+      <li><a href="sub.html">subscribe</a></li>
+      <li><a href="loginform.html">register</a></li>
+    </ul>
+  </div>
+</nav>
+
+<nav class="navbar">
+  <ul class="menu">
+    <li><a href="mymusic.html" style="margin-left: 300px;">All</a></li>
+    <li><a href="trending.html" >Trending Now</a></li>
+    <li><a href="oldsongs.html">Old Songs</a></li>
+    <li><a href="newsongs.html">New Songs</a></li>
+    <li><a href="topartists.html">Top Artists</a></li>
+    <li><a href="topplaylist.html">Top Playlist</a></li>
+    <li><a href="games.html">Games</a></li>
+    <li><a href="downloaded.html">Download</a></li>
+  </ul>
+</nav>
+
+<h1>Trending Now</h1>
+<div class="container">
+	<div class="item">
+<div class="image">
+  <img src="C:\Users\chefa\Downloads\WhatsApp Image 2023-05-04 at 14.49.23.jpeg" alt="Music Image" style="width: 360px; height: 260px;margin-bottom: 50px;">
+  <div class="music-info"style="justify-content: space-around;">
+    <h3>	Song Name:	&nbsp;&nbsp;	Nattu Nattu</h3>
+    <h3>		Movie Name:	&nbsp;&nbsp;	RRR</h3>
+    <audio controls>
+      <source src="C:\Users\chefa\Downloads\Nattu Nattu ! Tamil ! Nattu Nattu Song ! Nattu Naatu.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+</div>
+<button onclick="downloadMusic()" style="margin-top: 30px;">Download</button>
+
+  <div class="clearfix"></div>
+
+
+
+  <div class="item">
+<div class="image">
+<img src="C:\Users\chefa\Downloads\WhatsApp Image 2023-05-04 at 14.18.36.jpeg" alt="Music Image"style="width: 360px; height: 260px;margin-bottom: 50px;">
+  <div class="music-info"style="justify-content: space-around;">
+     <h3>Song Name: &nbsp;&nbsp;Vilambara Idaiveli</h3>
+    <h3>Movie Name: &nbsp;&nbsp;Imaikka Nodigal</h3>
+    <audio controls>
+      <source src="C:\Users\chefa\Downloads\Vilambara idaiveli.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+</div>
+<button onclick="downloadMusic()" style="margin-top: 30px;">Download</button>
+  <div class="clearfix"></div>
+
+  
+
+
+
+
+<div class="item">
+<div class="image">   
+   <img src="C:\Users\chefa\Downloads\WhatsApp Image 2023-05-04 at 14.57.02.jpeg" alt="Music Image"style="width: 360px; height: 260px;margin-bottom: 50px;">
+  <div class="music-info"style="justify-content: space-around;">
+     <h3>Song Name:	&nbsp;&nbsp;Bullet</h3>
+    <h3>Movie Name:	&nbsp;&nbsp;		Warior</h3>
+    <audio controls>
+      <source src="C:\Users\chefa\Downloads\Bullet Song Simbu.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+</div>
+<button onclick="downloadMusic()" style="margin-top: 30px;">Download</button>
+  <div class="clearfix"></div>
+
+
+
+
+<div class="item">   
+<div class="image">
+     <img src="C:\Users\chefa\Downloads\WhatsApp Image 2023-05-04 at 14.55.13.jpeg" alt="Music Image"style="width: 360px; height: 260px;margin-bottom: 50px;">
+  <div class="music-info"style="justify-content: space-around;">
+    <h3>Song Name:  &nbsp;&nbsp;Oo Solriya</h3>
+    <h3>Movie Name: &nbsp;&nbsp;  Puspa</h3>
+    <audio controls>
+      <source src="C:\Users\chefa\Downloads\Oosolriya Mama ! Oo Solriya Mama Ok Solriya Mama ! Pushpa ! Dhanush.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+</div>
+<button onclick="downloadMusic()" style="margin-top: 30px;">Download</button>
+  <div class="clearfix"></div>
+
+
+<div class="item">
+<div class="image">
+  <img src="C:\Users\chefa\Downloads\WhatsApp Image 2023-05-04 at 14.53.15.jpeg" alt="Music Image"style="width: 360px; height: 260px;margin-bottom: 50px;">
+  <div class="music-info"style="justify-content: space-around;">
+     <h3>Song Name:	&nbsp;&nbsp;Ranjithame</h3>
+    <h3>Movie Name:	&nbsp;&nbsp;		Varisu</h3>
+    <audio controls>
+      <source src="C:\Users\chefa\Downloads\Ranjithame Ranjithame - Varisu.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+</div>
+<button onclick="downloadMusic()" style="margin-top: 30px;">Download</button>
+  <div class="clearfix"></div>
+
+
+
+
+
+
+<div class="item">
+<div class="image">
+<img src="C:\Users\chefa\Downloads\adiye.jpg"alt="Music Image"style="width: 360px; height: 260px;margin-bottom: 50px;">
+  <div class="music-info"style="justify-content: space-around;"style="justify-content: space-around;">
+     <h3>Song Name:	&nbsp;&nbsp;Adiye</h3>
+    <h3>Movie Name:	&nbsp;&nbsp;		Bachelor</h3>
+    <audio controls>
+      <source src="C:\Users\chefa\Downloads\Adiye - Bachelor ! Gv Prakash ! Tamil Song.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+</div>
+<button onclick="downloadMusic()" style="margin-top: 30px;">Download</button>
+<div class="clearfix"></div>
+
+<div class="item">
+<div class="image">
+  <img src="C:\Users\chefa\Downloads\WhatsApp Image 2023-05-04 at 13.15.36.jpeg" alt="Music Image"style="width: 360px; height: 260px;margin-bottom: 50px;">
+  <div class="music-info"style="justify-content: space-around;">
+     <h3>Song Name:	&nbsp;&nbsp;Nee Partha</h3>
+    <h3>Movie Name:	&nbsp;&nbsp;		3</h3>
+    <audio controls>
+      <source src="C:\Users\chefa\Downloads\Nee Paartha Vizhigal.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+</div>
+<button onclick="downloadMusic()" style="margin-top: 30px;">Download</button>
+  <div class="clearfix"></div>
+
+<div class="item">
+<div class="image">
+<img src="C:\Users\chefa\Downloads\WhatsApp Image 2023-05-04 at 14.18.36.jpeg" alt="Music Image"style="width: 360px; height: 260px;margin-bottom: 50px;">
+  <div class="music-info"style="justify-content: space-around;">
+     <h3>Song Name:	&nbsp;&nbsp;Vilambara Idaiveli</h3>
+    <h3>Movie Name:	&nbsp;&nbsp;Imaikka Nodigal</h3>
+    <audio controls>
+      <source src="C:\Users\chefa\Downloads\Vilambara idaiveli.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+</div>
+<button onclick="downloadMusic()" style="margin-top: 30px;">Download</button>
+  <div class="clearfix"></div>
+
+
+<div class="item">
+<div class="image">
+  <img src="C:\Users\chefa\Downloads\WhatsApp Image 2023-05-04 at 14.18.37 (2).jpeg" alt="Music Image"style="width: 360px; height: 260px;margin-bottom: 50px;">
+  <div class="music-info"style="justify-content: space-around;">
+     <h3>Song Name:	&nbsp;&nbsp;Enna Solla</h3>
+    <h3>Movie Name:	&nbsp;&nbsp;Thangamagn</h3>
+    <audio controls>
+      <source src="C:\Users\chefa\Downloads\Enna Solla Ethu Solla - Thangamagan ! South.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+</div>
+<button onclick="downloadMusic()" style="margin-top: 30px;">Download</button>
+  <div class="clearfix"></div>
+
+<div class="item">
+<div class="image">
+  <img src="C:\Users\chefa\Downloads\WhatsApp Image 2023-05-04 at 13.15.36.jpeg" alt="Music Image"style="width: 360px; height: 260px;margin-bottom: 50px;">
+  <div class="music-info"style="justify-content: space-around;">
+     <h3>Song Name:	&nbsp;&nbsp;Why This Kolaveri</h3>
+    <h3>Movie Name:	&nbsp;&nbsp; 3</h3>
+    <audio controls>
+      <source src="C:\Users\chefa\Downloads\Why This Kolaveri Di-Dhanush.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+</div>
+<button onclick="downloadMusic()" style="margin-top: 30px;">Download</button>
+  <div class="clearfix"></div>
+
+<div class="item">
+<div class="image">
+  <img src="C:\Users\chefa\Downloads\WhatsApp Image 2023-05-04 at 14.18.37 (1).jpeg" alt="Music Image"style="width: 360px; height: 260px;margin-bottom: 50px;">
+  <div class="music-info"style="justify-content: space-around;">
+     <h3>Song Name:	&nbsp;&nbsp;Mehabooba</h3>
+    <h3>Movie Name:	&nbsp;&nbsp;KGF Chapter-2</h3>
+    <audio controls>
+      <source src="C:\Users\chefa\Downloads\Mehbooba Tamil Songs.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+</div>
+<button onclick="downloadMusic()" style="margin-top: 30px;">Download</button>
+<div class="clearfix"></div>
+
+
+
+
+</div>

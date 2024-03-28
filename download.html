@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+	<title>download</title>
+</head>
+<body>
+<div class="music-container">
+  <img src="C:\Users\chefa\Downloads\hiphop.jpg" alt="Music Image">
+  <div class="music-info">
+    <h3>Song Title</h3>
+    <p>Artist Name</p>
+    <button onclick="downloadMusic()">Download</button>
+  </div>
+</div>
+
+<div class="download-section">
+  <h2>Downloaded Songs</h2>
+  <ul id="download-list"></ul>
+</div>
+
+	<script>
+		function downloadMusic() {
+  var musicURL = "C:/Users/chefa/Downloads/Indru Netru Naalai - Hiphop Tamizha - Copy.mp3";
+  var fileName = "song.mp3";
+  
+  // Store the downloaded song information in local storage
+  var downloadedSongs = JSON.parse(localStorage.getItem("downloadedSongs")) || [];
+  downloadedSongs.push({ name: fileName, url: musicURL });
+  localStorage.setItem("downloadedSongs", JSON.stringify(downloadedSongs));
+
+  // Update the download section
+  updateDownloadSection();
+}
+
+function updateDownloadSection() {
+  var downloadList = document.getElementById("download-list");
+  var downloadedSongs = JSON.parse(localStorage.getItem("downloadedSongs")) || [];
+
+  // Clear the existing download list
+  downloadList.innerHTML = "";
+
+  // Loop through the downloaded songs and create list items
+  downloadedSongs.forEach(function(song) {
+    var listItem = document.createElement("li");
+    listItem.innerHTML = '<a href="' + song.url + '" download>' + song.name + '</a>';
+    downloadList.appendChild(listItem);
+  });
+}
+
+// On page load, update the download section
+updateDownloadSection();
+
+	</script>
